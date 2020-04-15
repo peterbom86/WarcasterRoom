@@ -1,5 +1,6 @@
 {
   "name": "warcaster-room",
+  "homepage": "http://peterbom86.github.io/WarcasterRoom",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
