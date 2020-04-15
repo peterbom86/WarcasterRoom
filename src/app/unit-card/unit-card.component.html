@@ -1,0 +1,116 @@
+<div *ngIf="unit$ | async as unit" fxLayout="column" class="card">
+  <div class="card-top">
+    <div
+      fxFlex="10"
+      fxLayout="column"
+      fxLayoutGap="1rem"
+      fxLayoutAlign="space-around center"
+      class="faction-image"
+    >
+      <img src="..\..\assets\mw_transparent.png" />
+      <div class="dc">DC: {{ unit.deploymentCost }}</div>
+    </div>
+
+    <div fxLayout="column">
+      <div>
+        <h3 class="title">{{ unit.name }}</h3>
+        <h4 class="title">{{ unit.unitDescription }}</h4>
+      </div>
+
+      <!-- statblock -->
+      <div fxLayout="row" fxLayoutGap="1rem" class="stats">
+        <div fxLayout="column" fxLayoutAlign="space-around center">
+          <div>
+            SPD
+          </div>
+          <div>
+            {{ unit.spd }}
+          </div>
+        </div>
+
+        <div fxLayout="column">
+          <div>
+            /
+          </div>
+        </div>
+
+        <div fxLayout="column" fxLayoutAlign="space-around center">
+          <div>
+            MAT
+          </div>
+          <div>
+            {{ unit.mat }}
+          </div>
+        </div>
+
+        <div fxLayout="column">
+          <div>
+            /
+          </div>
+        </div>
+
+        <div fxLayout="column" fxLayoutAlign="space-around center">
+          <div>
+            RAT
+          </div>
+          <div>
+            {{ unit.rat }}
+          </div>
+        </div>
+
+        <div fxLayout="column">
+          <div>
+            /
+          </div>
+        </div>
+
+        <div fxLayout="column" fxLayoutAlign="space-around center">
+          <div>
+            DEF
+          </div>
+          <div>
+            {{ unit.def }}
+          </div>
+        </div>
+
+        <div fxLayout="column">
+          <div>
+            /
+          </div>
+        </div>
+
+        <div fxLayout="column" fxLayoutAlign="space-around center">
+          <div>
+            ARM
+          </div>
+          <div>
+            {{ unit.arm }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-bottom" fxLayout="row">
+    <div fxFlex="10" class="unit-image">
+      <img [src]="unit.unitImage" />
+    </div>
+
+    <div fxLayout="column" fxLayoutGap="0.5rem">
+      <div class="weapons" *ngFor="let weapon of unit.weapons">
+        <u>{{ weapon.name }}</u> /
+        <ng-container *ngFor="let type of weapon.types; let isLast=last">
+          {{ type.toString() }} {{isLast ? '' : '&'}}
+        </ng-container>
+        / RNG:
+        {{ weapon.rng }}
+        POW:
+        {{ weapon.pow }}
+        <div *ngFor="let specialRule of weapon.specialRules">
+          <i>{{ specialRule.name }} -</i>
+          {{ specialRule.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
