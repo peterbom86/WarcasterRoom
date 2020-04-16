@@ -5,6 +5,7 @@ export const UNITS: Unit[] = [
   {
     id: '1',
     name: 'Dusk Wolf',
+    faction: 'mw',
     unitDescription: 'Marcher Worlds Warjack',
     spd: 5,
     str: 4,
@@ -80,11 +81,12 @@ export const UNITS: Unit[] = [
         ]
       }
     ],
-    unitImage: 'assets\\MW\\Warjacks\\Dusk_Wolf.png'
+    unitImage: 'assets\\mw\\Warjacks\\Dusk_Wolf.png'
   } as Warjack,
   {
     id: '2',
     name: 'Ranger Fire Team',
+    faction: 'mw',
     unitDescription: 'Marcher Worlds Squad',
     spd: 6,
     mat: 3,
@@ -127,6 +129,6 @@ export const UNITS: Unit[] = [
         specialRules: []
       }
     ],
-    unitImage: 'assets\\MW\\Squads\\ranger.png'
+    unitImage: 'assets\\mw\\Squads\\ranger.png'
   }
 ];

@@ -3,6 +3,7 @@ import { Weapon } from './Weapon';
 export class Unit {
   id: string;
   name: string;
+  faction: string;
   unitDescription: string;
   spd: number;
   mat: number;
