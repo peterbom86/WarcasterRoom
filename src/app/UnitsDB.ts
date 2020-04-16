@@ -81,7 +81,7 @@ export const UNITS: Unit[] = [
         ]
       }
     ],
-    unitImage: 'assets\\mw\\Warjacks\\Dusk_Wolf.png'
+    unitImage: 'assets\\MW\\Warjacks\\Dusk_Wolf.png'
   } as Warjack,
   {
     id: '2',
@@ -129,6 +129,6 @@ export const UNITS: Unit[] = [
         specialRules: []
       }
     ],
-    unitImage: 'assets\\mw\\Squads\\ranger.png'
+    unitImage: 'assets\\MW\\Squads\\ranger.png'
   }
 ];
