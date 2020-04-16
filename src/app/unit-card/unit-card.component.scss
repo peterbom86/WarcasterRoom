@@ -1,17 +1,13 @@
 * {
   text-shadow: 2px 2px 8px rgb(56, 52, 52);
+  font-size: min(max(1rem, 3vw), 3rem);
+
 }
 
 .card {
-  // background: repeating-linear-gradient(130deg,
-  // #acd46b 0,
-  // rgba(0, 0, 0, 0.473) 1px, rgba(0, 0, 0, 0.473) .05em,
-  // #acd46b calc(.05em + 1px), #acd46b .65em
-  // );
-
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
+  overflow: scroll;
 }
 
 img {
@@ -26,6 +22,7 @@ img {
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-right: 5rem;
 }
 
 .card-bottom {
@@ -66,6 +63,7 @@ h4 {
   padding: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: hsla(83, 47%, 75%, 0.486);
+
 }
 
 .weapons {

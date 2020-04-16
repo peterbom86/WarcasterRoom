@@ -5,7 +5,7 @@ export const UNITS: Unit[] = [
   {
     id: '1',
     name: 'Dusk Wolf',
-    faction: 'mw',
+    faction: 'MW',
     unitDescription: 'Marcher Worlds Warjack',
     spd: 5,
     str: 4,
@@ -86,7 +86,7 @@ export const UNITS: Unit[] = [
   {
     id: '2',
     name: 'Ranger Fire Team',
-    faction: 'mw',
+    faction: 'MW',
     unitDescription: 'Marcher Worlds Squad',
     spd: 6,
     mat: 3,
