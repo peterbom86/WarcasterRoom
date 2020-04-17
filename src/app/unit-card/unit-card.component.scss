@@ -1,7 +1,6 @@
 * {
   text-shadow: 2px 2px 8px rgb(56, 52, 52);
-  font-size: min(max(1rem, 3vw), 3rem);
-
+  font-size: min(max(0.5rem, 3vw), 1rem);
 }
 
 .card {
@@ -11,8 +10,8 @@
 }
 
 img {
-  min-width: 30%;
-  max-width: 100%;
+  min-width: 3vw;
+  max-width: 15vw;
 }
 
 .card-top {
@@ -28,7 +27,7 @@ img {
 .card-bottom {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-right: 4rem;
+  padding-right: 3rem;
 }
 
 .dc {
@@ -46,7 +45,7 @@ img {
 }
 
 .faction-image {
-  margin-left: 2.5rem;
+  margin-left: 1.5rem;
   margin-right: 1rem;
 }
 
@@ -63,10 +62,14 @@ h4 {
   padding: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: hsla(83, 47%, 75%, 0.486);
-
+  z-index: 99999;
 }
 
-.weapons {
+.options-title {
+  color: rgba(255, 255, 255, 0.815);
+}
+
+.weapons, .cortex {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.411), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem;
   padding: 1rem;

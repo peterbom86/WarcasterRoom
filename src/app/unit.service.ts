@@ -10,6 +10,7 @@ export class UnitService {
   constructor() { }
 
   getUnit(unitId: string): Unit {
-    return UNITS.find(u => u.id === unitId);
+    const unit = UNITS.find(u => u.id === unitId);
+    return unit;
   }
 }

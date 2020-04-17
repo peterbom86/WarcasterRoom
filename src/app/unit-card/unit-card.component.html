@@ -1,10 +1,10 @@
 <div *ngIf="unit$ | async as unit" fxLayout="column" class="card">
   <div class="card-top">
     <div
-      fxFlex="10"
+      fxFlex="20"
       fxLayout="column"
       fxLayoutGap="1rem"
-      fxLayoutAlign="space-around center"
+      fxLayoutAlign="center center"
       class="faction-image"
     >
       <img src="assets\\{{ unit.faction }}\\logo.png" />
@@ -17,7 +17,7 @@
         <h4 class="title">{{ unit.unitDescription }}</h4>
       </div>
 
-      <!-- statblock -->
+      <!-- Statblock -->
       <div fxLayout="row" fxLayoutGap="0.5em" class="stats">
         <div fxLayout="column" fxLayoutAlign="space-around center">
           <div>
@@ -87,7 +87,26 @@
             {{ unit.arm }}
           </div>
         </div>
+
+        <div *ngIf="unit | IsWeaver as weaver" fxLayout="row" fxLayoutGap="0.5rem">
+          <div fxLayout="column">
+            <div>
+              /
+            </div>
+          </div>
+
+          <div fxLayout="column" fxLayoutAlign="space-around center">
+            <div>
+              FOC
+            </div>
+            <div>
+              {{ weaver.focus }}
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Additional Stats -->
     </div>
   </div>
 
@@ -96,11 +115,23 @@
     <div id="stars2"></div>
     <div id="stars3"></div>
 
-    <div fxFlex="10" class="unit-image">
+    <div fxFlex="20" class="unit-image" fxLayoutAlign="center start">
       <img [src]="unit.unitImage" />
     </div>
 
     <div fxLayout="column" fxLayoutGap="0.5rem">
+      <ng-container *ngIf="unit | IsWarjack as warjack">
+        <h3 class="options-title">Cortex</h3>
+        <div class="cortex" *ngFor="let c of warjack.cortex">
+          <u>{{ c.name }}</u>
+          <div *ngFor="let specialRule of c.specialRules">
+            <i>{{ specialRule.name }} -</i>
+            {{ specialRule.description }}
+          </div>
+        </div>
+      </ng-container>
+
+      <h3 class="options-title">Weapons</h3>
       <div class="weapons" *ngFor="let weapon of unit.weapons">
         <u>{{ weapon.name }}</u> /
         <ng-container *ngFor="let type of weapon.types; let isLast = last">
