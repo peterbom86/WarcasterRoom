@@ -9,6 +9,8 @@ import { CardSelectionComponent } from './card-selection/card-selection.componen
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { IsWarjackPipe } from '../app/pipes/IsWarjackPipe';
 import { IsWeaverPipe } from './pipes/IsWeaverPipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { IsWeaverPipe } from './pipes/IsWeaverPipe';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
