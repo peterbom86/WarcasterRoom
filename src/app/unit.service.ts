@@ -13,4 +13,9 @@ export class UnitService {
     const unit = UNITS.find(u => u.id === unitId);
     return unit;
   }
+
+  getUnitsFrom(factionId: string): Unit[] {
+    const units = UNITS.filter(u => u.faction === factionId);
+    return units;
+  }
 }

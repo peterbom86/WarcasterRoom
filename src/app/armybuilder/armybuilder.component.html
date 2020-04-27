@@ -1,0 +1,32 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="bg-pattern">
+  <h1 *ngIf="!factionAndPoints" (click)="createArmy()">Build army</h1>
+
+  <div *ngIf="factionAndPoints">
+    <h3>
+      {{ factionAndPoints.points }} pts. {{ factionAndPoints.faction }} army
+    </h3>
+
+    <!-- Unit Selection -->
+    <h4>Available units</h4>
+    <div fxLayoutGap="0.5rem" fxLayout="column">
+      <div
+        *ngFor="let unit of availableUnits"
+        class="unit"
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        fxLayoutGap="1rem"
+        matRipple
+        [matRippleCentered]="true"
+        [matRippleTrigger]="trigger"
+      >
+        <div>
+          {{ unit.name }}
+        </div>
+
+        <div class="material-icons plus-ikon" #trigger fxLayoutAlign="center center">
+          control_point
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

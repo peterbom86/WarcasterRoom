@@ -1,0 +1,38 @@
+<h1 mat-dialog-title>Select Faction and Point level</h1>
+<div mat-dialog-content fxLayout="column" fxLayoutGap="1rem">
+  <div class="faction">
+    <mat-radio-group
+      matinput
+      aria-label="Faction"
+      [(ngModel)]="selectedFaction"
+    >
+      <mat-radio-button value="ISA">Iron Star Alliance</mat-radio-button>
+      <mat-radio-button value="MW">Marchers Worlds</mat-radio-button>
+      <mat-radio-button value="AC">Aeternus Continuum</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="ptsLevel">
+    <mat-radio-group
+      matinput
+      aria-label="Point level"
+      [(ngModel)]="selectedPointlevel"
+    >
+      <mat-radio-button value="8">8 pts</mat-radio-button>
+      <mat-radio-button value="15">15 pts</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button
+    mat-button color="primary"
+    [mat-dialog-close]="{
+      faction: selectedFaction,
+      points: selectedPointlevel
+    }"
+    cdkFocusInitial
+  >
+    Ok
+  </button>
+</div>

@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyA9NYL2W4lBTyRb4LX6FYXpJt7oXo0XsCE',
+    authDomain: 'warcasterroom.firebaseapp.com',
+    databaseURL: 'https://warcasterroom.firebaseio.com/',
+    projectId: 'warcasterroom',
+    // storageBucket: '<your-storage-bucket>',
+    // messagingSenderId: '<your-messaging-sender-id>'
+  }
 };
 
 /*

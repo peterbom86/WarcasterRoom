@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "warcasterroom": {
+      "hosting": {
+        "WarcasterRoom": [
+          "warcasterroom"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "staging": "warcasterroom"
+  }
+}
